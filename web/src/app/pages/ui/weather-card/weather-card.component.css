@@ -1,0 +1,84 @@
+
+.forecast-condition__icon {
+  height: 4rem;
+}
+
+.weather-card {
+  margin: 60px auto;
+  min-height: 700px;
+  width: 350px;
+  background: #fff;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.weather-card .top {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top .wrapper .heading {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+}
+.weather-card .top .wrapper .location {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp {
+  margin-top: 20px;
+}
+.weather-card .top .wrapper .temp span {
+  text-decoration: none;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp span .temp-type {
+  font-size: 85px;
+}
+.weather-card .top .wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 85px;
+  font-weight: 600;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp .deg {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.weather-card .bottom {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.weather-card .bottom .weather{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.weather .future .day {
+  text-align: center;
+  cursor: pointer;
+}
+
+.weather .future .day p {
+  margin: 0px;
+}

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="weather-card">
+        <div class="top">
+          <div class="wrapper">
+            <h1 class="heading">{{state}}</h1>
+            <h3 class="location">{{cityName}}</h3>
+            <p class="temp">
+              <span class="temp-value">{{temp}}</span>
+              <span class="deg">0</span>
+              <span><span class="temp-type">F</span></span>
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="weather">
+            <div [ngSwitch]="true" *ngFor="let day of daysForecast | keyvalue: sortByDay">
+              <div class="future">
+                <div class="day">
+                  <h3>{{day.key}}</h3>
+                  <div>
+                    <p>
+                      <span class="wi wi-day-cloudy" *ngSwitchCase="day.value.state === 'Clouds'"></span>
+                      <span class="wi wi-day-fog" *ngSwitchCase="day.value.state === 'Haze' || day.value.state === 'Fog'"></span>
+                      <span class="wi wi-day-rain" *ngSwitchCase="day.value.state === 'Rain' || day.value.state === 'Drizzle'"></span>
+                      <span class="wi wi-day-storm" *ngSwitchCase="day.value.state === 'Storm' || day.value.state === 'Thunderstorm'"></span>
+                      <span class="wi wi-day-sunny" *ngSwitchCase="day.value.state === 'Sunny' || day.value.state === 'Clear'"></span>
+                    </p>
+                    <p>
+                      {{day.value.temp}}°F
+                    </p>
+                    <p>
+                      {{day.value.state}}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

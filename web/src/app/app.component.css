@@ -1,0 +1,21 @@
+.container-fluid {
+  padding-top: 80px;
+  background-image: url("../assets/images/bg.png");
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  margin: 0px 32px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 959px) {
+  .main-container {
+    margin: 0px 16px;
+  }
+}

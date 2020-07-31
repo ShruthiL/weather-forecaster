@@ -1,0 +1,32 @@
+<div>
+  <div class="alert alert-danger" role="alert" *ngIf="showAddCityError">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>ERROR:</strong> Failure to add city to your preferences, please try again.
+  </div>
+
+  <div class="alert alert-success" role="alert" *ngIf="showAddCitySuccess">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>SUCCESS:</strong> Searched city is successfully added to your preference, please navigate to <div routerLink="">Home</div>.
+  </div>
+
+  <div class="header">
+    <h3 class="title">SEARCH COUNTRY CAPITAL CITY</h3>
+    <div class="search-wrapper">
+      <input class="form-control" auto-complete-placeholder="search capital city" placeholder="search country capital city"
+             auto-complete [(ngModel)]="selectedCity"
+             (keyup.enter)="selectCity(input.value)"
+             (ngModelChange)="selectCity(input.value)"
+             [source]="capitals" [max-num-list]="15" [close-on-focusout]="false" #input/>
+    </div>
+    <button class="btn search-btn" (click)="selectCity(input.value)">
+      Search capitals
+    </button>
+  </div>
+
+  <div class="body">
+    <span *ngIf="showNote">City name is not valid.</span>
+    <app-weather-card *ngIf="cardCity" [city]="cardCity"></app-weather-card>
+    <button class="btn" *ngIf="cardCity" (click)="saveCity(cardCity)">Save City</button>
+  </div>
+
+</div>

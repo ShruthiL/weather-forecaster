@@ -1,0 +1,8 @@
+.navbar{
+  background-color: #792C74;
+  color: white;
+}
+
+.link-active {
+  border-bottom: 1px solid white;
+}

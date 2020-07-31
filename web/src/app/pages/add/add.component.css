@@ -1,0 +1,19 @@
+h3 {
+  color: #792C74;
+}
+.search-btn {
+  margin: 1px 8px;
+}
+
+.search-wrapper {
+  display: inline-block;
+}
+
+.body {
+  margin-top: 32px;
+}
+
+.btn {
+  background-color: #FA9500;
+  color: white;
+}

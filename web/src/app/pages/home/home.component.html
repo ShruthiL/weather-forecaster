@@ -1,0 +1,13 @@
+<div class="alert alert-danger" role="alert" *ngIf="displayError">
+  <strong>ERROR:</strong> Failure to get your preferences, please try again.
+  <br/>
+  Error Code: {{displayError.statusText}}
+</div>
+
+
+<app-add-card></app-add-card>
+
+<div class="main-container">
+  <div *ngIf="showNoCities">No City has been added to your account.</div>
+  <app-weather-card *ngFor="let city of cities;" [city]="city"></app-weather-card>
+</div>
