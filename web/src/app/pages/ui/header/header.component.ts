@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  isNavBarExpanded = false;
+  isNavBarExpanded: boolean = false;
   isLoggedIn: Observable<boolean>
 
   constructor(private fb: FbService, private router: Router) { }

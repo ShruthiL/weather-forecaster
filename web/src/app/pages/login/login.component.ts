@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   @ViewChild('authform') loginForm: NgForm;
-  errorMessage = '';
+  errorMessage: string = '';
 
   constructor(private fb: FbService, private router: Router) { }
 

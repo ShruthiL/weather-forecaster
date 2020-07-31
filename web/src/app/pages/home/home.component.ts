@@ -11,15 +11,15 @@ import {DataStorageService} from "../../services/data-storage/data-storage.servi
 export class HomeComponent implements OnInit {
 
   cities;
-  showNoCities = false;
-  showError = false;
-  displayError;
+  showNoCities: boolean = false;
+  showError: boolean = false;
+  displayError: string;
 
   constructor(private ds: DataStorageService, private fb: FbService) { }
 
   ngOnInit(): void {
     this.fb.userData().subscribe((user) => {
-      this.ds.getData(`/getCities/${user.uid}`).subscribe((cities: Array<any>) => {
+      this.ds.getData(`http://localhost:3000/getCities/${user.uid}`).subscribe((cities: Array<any>) => {
         this.showError = false;
         if (cities.length === 0) {
           this.showNoCities = true;

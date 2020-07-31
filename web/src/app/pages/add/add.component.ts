@@ -9,12 +9,12 @@ import {DataStorageService} from "../../services/data-storage/data-storage.servi
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-  capitals = [];
-  cardCity;
-  showNote = false;
+  capitals: Array<any> = [];
+  cardCity: string;
+  showNote: boolean = false;
   selectedCity: any;
-  showAddCitySuccess = false;
-  showAddCityError = false;
+  showAddCitySuccess: boolean = false;
+  showAddCityError: boolean = false;
 
   constructor(private weather: WeatherService, private fb: FbService, private ds: DataStorageService) { }
 
@@ -40,7 +40,7 @@ export class AddComponent implements OnInit {
 
   saveCity(cardCity: string) {
     this.fb.userData().subscribe((user) => {
-      this.ds.postData('/addCity', {
+      this.ds.postData('http://localhost:3000/addCity', {
         uid: user.uid,
         city: cardCity
       }).subscribe(() => {

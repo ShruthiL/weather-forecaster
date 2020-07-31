@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(public fb: FbService, public router: Router) {
+  constructor(private fb: FbService, private router: Router) {
   }
 
   canActivate(
