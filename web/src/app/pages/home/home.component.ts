@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.fb.userData().subscribe((user) => {
-      this.ds.getData(`http://localhost:3000/getCities/${user.uid}`).subscribe((cities: Array<any>) => {
+      this.ds.getData(`/getCities/${user.uid}`).subscribe((cities: Array<any>) => {
         this.showError = false;
         if (cities.length === 0) {
           this.showNoCities = true;

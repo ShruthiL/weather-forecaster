@@ -40,7 +40,7 @@ export class AddComponent implements OnInit {
 
   saveCity(cardCity: string) {
     this.fb.userData().subscribe((user) => {
-      this.ds.postData('http://localhost:3000/addCity', {
+      this.ds.postData('/addCity', {
         uid: user.uid,
         city: cardCity
       }).subscribe(() => {
